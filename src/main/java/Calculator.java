@@ -15,7 +15,7 @@ public class Calculator {
         System.out.print("Please enter the first number: ");
         double b = sc.nextDouble();
         System.out.println("Please enter an operation: ");
-        System.out.println("add, subtract, divide, multiply, exponent");
+        System.out.println("add, subtract, multiply, divide, exponent");
         String op = sc.next();
 
         switch (op) {
@@ -27,6 +27,9 @@ public class Calculator {
                 break;
             case "multiply":
                 mul(a, b);
+                break;
+            case "divide":
+                div(a, b);
                 break;
             default:
                 System.out.println("Invalid operation");
@@ -44,5 +47,14 @@ public class Calculator {
     public static void mul(double a, double b) {
         double mul = a * b;
         System.out.println("The answer is: " + mul);
+    }
+    public static void div(double a, double b) {
+        if (b == 0) {   // checking for 0, cannot divide my zero
+            System.out.println("Division by zero is not allowed.");
+        } else {
+            // if the number is something other than zero the operation is carried out
+            double div = a / b;
+            System.out.println("The answer is: " + div);
+        }
     }
 }
