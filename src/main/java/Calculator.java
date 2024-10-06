@@ -31,6 +31,9 @@ public class Calculator {
             case "divide":
                 div(a, b);
                 break;
+            case "exponent":
+                exp(a, b);
+                break;
             default:
                 System.out.println("Invalid operation");
                 break;
@@ -56,5 +59,9 @@ public class Calculator {
             double div = a / b;
             System.out.println("The answer is: " + div);
         }
+    }
+    public static void exp(double a, double b) {
+        double exp = Math.pow(a, b);
+        System.out.println("The answer is: " + exp);
     }
 }
