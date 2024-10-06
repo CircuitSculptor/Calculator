@@ -1,7 +1,7 @@
 /*
  Bartlomiej Drapinski
- 25/09/24
- Basic Calculator in Java
+ 02/10/24
+ Calculator in Java using Github
 */
 
 import java.util.Scanner;
@@ -11,9 +11,9 @@ public class Calculator {
         //methods
         System.out.print("Please enter the first number: ");
         Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt();
+        double a = sc.nextDouble();
         System.out.print("Please enter the first number: ");
-        int b = sc.nextInt();
+        double b = sc.nextDouble();
         System.out.println("Please enter an operation: ");
         System.out.println("add, subtract, divide, multiply, exponent");
         String op = sc.next();
@@ -25,17 +25,24 @@ public class Calculator {
             case "subtract":
                 sub(a, b);
                 break;
+            case "multiply":
+                mul(a, b);
+                break;
             default:
                 System.out.println("Invalid operation");
                 break;
         }
     }
-    public static void add(int a, int b) {
-        int sum = a + b;
+    public static void add(double a, double b) {
+        double sum = a + b;
         System.out.println("The sum is: " + sum);
     }
-    public static void sub(int a, int b) {
-        int sub = a - b;
+    public static void sub(double a, double b) {
+        double sub = a - b;
         System.out.println("The answer is: " + sub);
+    }
+    public static void mul(double a, double b) {
+        double mul = a * b;
+        System.out.println("The answer is: " + mul);
     }
 }
